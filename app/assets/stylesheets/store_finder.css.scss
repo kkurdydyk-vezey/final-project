@@ -1,16 +1,27 @@
 // Place all the styles related to the store_finder controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.container{
-    border: 1px solid black;
-    
+header{
     h1{
+        font-size: 36px;
         margin: 10px;
         color: #6699FF;
         font-family: sans-serif;
         text-shadow: .5px .5px #000;
     }
 }
+
+.container{
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+.content{
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .nav ul{
     list-style-type: none;
     
