@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120225223) do
+ActiveRecord::Schema.define(version: 20141120232013) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -62,6 +62,9 @@ ActiveRecord::Schema.define(version: 20141120225223) do
     t.date     "rescue_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "breed_id"
   end
+
+  add_index "cats", ["breed_id"], name: "index_cats_on_breed_id"
 
 end

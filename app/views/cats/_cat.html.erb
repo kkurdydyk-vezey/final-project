@@ -5,6 +5,9 @@
   <h2><%= cat.name %></h2>
   <p><strong>Age: </strong><%= cat.age %></p>
   <p><strong>Colour: </strong><%= cat.colour %></p>
+  <% if cat.breed.present? %>
+  <p><strong>Breed: </strong><%= cat.breed.name %></p>
+  <% end %>
   <p><strong>Rescue Date: </strong><%= cat.rescue_date %></p>
   <p><strong>Adoption Fee: </strong><%= cat.price %></p>
   <%= link_to 'Adopt Me!', adopt_path %>

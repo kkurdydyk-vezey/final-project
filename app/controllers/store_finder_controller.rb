@@ -4,7 +4,7 @@ class StoreFinderController < ApplicationController
   end
   def index
     #load all cats
-    @cats = Cat.all
+    @cats = Cat.order("name").page(params[:page]).per(2)
   end
   def adopt
     
