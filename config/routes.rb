@@ -8,4 +8,7 @@ Rails.application.routes.draw do
  get 'home' => 'store_finder#home'
  get 'adopt' => 'store_finder#adopt'
  get 'contact' => 'store_finder#contact'
+ get 'breed' => 'store_finder#breeds'
+ get 'search_results' => 'store_finder#search_results', as: 'search_results'
+
 end

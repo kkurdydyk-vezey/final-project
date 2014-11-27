@@ -1,0 +1,38 @@
+<%= form_for @cat do |f| %>
+  <% if @cat.errors.any? %>
+    <p>There were <%= pluralize @cat.errors.count, 'error' %> that occured.</p>
+    <ul>
+      <% @cat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<div>
+  <%= f.label :name %>
+  <br>
+    <%= f.text_field :name%>  
+</div>
+<div>
+  <%= f.label :colour%>
+  <br>
+    <%= f.text_area :colour %>
+</div>
+<div>
+  <%= f.label :age %>
+  <br>
+    <%=f.text_field :age%>
+</div>
+<div>
+  <%= f.label :rescue_date %>
+  <br>
+    <%= f.text_field :rescue_date %>
+</div>
+<div>
+  <%= f.label :price %>
+  <br>
+    <%= f.text_field :price %>
+</div>
+<div>
+  <%= f.submit%>
+</div>
+<% end %>

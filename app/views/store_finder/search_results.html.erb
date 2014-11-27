@@ -1,0 +1,9 @@
+<h2>Search Results for '<%= params[:search_keywords] %>':</h2>
+
+<% if @cats.size.zero? %>
+  <p><%= pluralize(@cats.size, 'Cat') %> found.</p>
+<% else %>
+  <%= render partial: 'cats/cat',
+      collection: @cats,
+      locals: { }%>
+<% end %>

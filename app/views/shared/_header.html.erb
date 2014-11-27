@@ -1,11 +1,17 @@
 <header>
   <h1>Kitten Rescue Centre</h1>
-</header>
 <div class="nav">
       <ul>
         <li><%= link_to 'Home', home_path %> -</li>
         <li><%= link_to 'Cats', cats_path %> -</li>
+        <li><%= link_to 'Breeds', breed_path %> -</li>
         <li><%= link_to 'Adopt', adopt_path %> -</li>
         <li><%= link_to 'Contact Us', contact_path %></li>
       </ul>
 </div>
+  <%= form_tag search_results_path, method: :get do %>
+    <%= text_field_tag :search_keywords %>
+    <%= submit_tag 'Search' %>
+  <% end %>
+  <br>
+</header>

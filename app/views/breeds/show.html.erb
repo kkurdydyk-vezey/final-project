@@ -4,7 +4,13 @@
   <strong>Name:</strong>
   <%= @breed.name %>
 </p>
-
+<p><strong>Associated Cats:</strong>
+<% if @breed.cats.presence? %>
+  <% @breed.cats.each do |cat| %>
+    <% link_to cat.name, cats_path %>
+    <% end %>
+<% end %>
+</p>
 <p>
   <strong>Description:</strong>
   <%= @breed.description %>
